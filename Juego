@@ -15,7 +15,7 @@ def vagabundo(salud, dinero):
   /___\\
    |$|
    |_|""")
-    decision= int(input("¿Que haces? -- Ignorarlo(1) -- Darle unas monedas(2) -- Decirle que no llevas efectivo(3): "))
+    decision=int(input("¿Que haces? -- Ignorarlo(1) -- Darle unas monedas(2) -- Decirle que no llevas efectivo(3): "))
     if decision == 1:
        print ("Te mira mal pero no pasa nada")
     elif decision == 2:
@@ -28,3 +28,17 @@ def vagabundo(salud, dinero):
 salud, dinero = vagabundo(salud, dinero)
 print ("salud actual es ", salud)
 print ("dinero actual es ", dinero)
+
+def pasaje (salud, dinero):
+    print("despues del incoveniente con el vagabundo llegas a la estacion de TransMi")
+    print("al momento de pagar el pasaje, no puedes, ya que te quedaste sin saldo; y mas aun, vas tarde")
+    print("""
+  __________________
+ |  TARJETA TU LLAVE|
+ |------------------|
+ |       $100       |
+ |__________________|""")
+    decision=int(input("¿Que haces? -- Colarte(1) -- Recargar la tarjeta(2) -- Pedirle a alguien que te pague el pasaje(3): "))
+    if decision == 1:
+       
+    
