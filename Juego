@@ -8,14 +8,13 @@ def vagabundo(salud, dinero):
     print("Es un dia comun y corriente en Bogota")
     print("Vas saliendo de tu casa para dirigirte al Transmilenio")
     print("mientras te diriges al TransMi, se te acerca un habitante de calle dudoso y te pide unas monedas")
-    print("""    
+    print("""
     O
-   /|\
-   / \
-  /___\
-  |$ $|
-  |___|
-          """)
+   /|\\
+   / \\
+  /___\\
+   |$|
+   |_|""")
     decision= int(input("¿Que haces? -- Ignorarlo(1) -- Darle unas monedas(2) -- Decirle que no llevas efectivo(3): "))
     if decision == 1:
        print ("Te mira mal pero no pasa nada")
