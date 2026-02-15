@@ -1,1 +1,2 @@
-k,safsjfhjzx
+print(Sobrivivir un dia en Bogota)
+nombre = str(input("ingrese su nombre:"))
