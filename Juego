@@ -1,4 +1,4 @@
-print("Sobrivivir un dia en Bogota")
+print("LLegar a Formarte")
 nombre=str(input("ingrese su nombre:"))
 
 salud=100
@@ -17,13 +17,13 @@ def vagabundo(salud, dinero):
    |_|""")
     decision=int(input("¿Que haces? -- Ignorarlo(1) -- Darle unas monedas(2) -- Decirle que no llevas efectivo(3): "))
     if decision == 1:
-       print ("Te mira mal pero no pasa nada")
+       print ("Te mira mal pero no pasa nada.")
     elif decision == 2:
          dinero = dinero - 1000
-         print ("Le das unas monedas que tenias por ahi")
+         print ("Le das unas monedas que tenias por ahi.")
     elif decision == 3:
          salud = salud - 10
-         print ("no te cree, te escupe y decides continuar, pero con indignacion")
+         print ("no te cree, te escupe y decides continuar, pero con indignacion.")
     return salud, dinero
 salud, dinero = vagabundo(salud, dinero)
 print ("salud actual es ", salud)
@@ -40,5 +40,46 @@ def pasaje (salud, dinero):
  |__________________|""")
     decision=int(input("¿Que haces? -- Colarte(1) -- Recargar la tarjeta(2) -- Pedirle a alguien que te pague el pasaje(3): "))
     if decision == 1:
+       salud = salud - 15
+       print("Logras colarte al TransMi, pero casi te ve el guarda, te baja la salud por el susto.")
+    elif decision == 2:
+         dinero = dinero - 3550
+         print("Recargas la tarjeta y entras tranquilo al TransMi, se te resta dinero.")
+    elif decision == 3:
+         salud = salud - 5
+         print("Después de insistir un poco, alguien te ayuda con el pasaje. Pasas pena y te baja la salud.")
+    return salud, dinero
+salud, dinero = pasaje(salud,dinero)
+print ("salud actual es ", salud)
+print ("dinero actual es ", dinero)
+
+def = Vendedora(salud, dinero):
+    print("Te subes al TransMilenio para dirigirte a Formarte")
+    print("En el trayecto, se sube un vendedora de apariencia extraña, y asegura que utiliza el dinero para ayudar a su familia)
+    print("""
+        ______________________________
+ _____ /                              \\_____
+|     |   TRANSMILENIO  BOGOTA        |    |
+|     |--------------------------------|    |
+|     |  []   []   []   []   []   []   |    |
+|_____|________________________________|____|
+   O                                      O
+""")
+    decision=int(input("¿Que haces? -- Hacerte el dormirdo(1) -- Comprar algo(2) -- Decirle que no pero con respeto(3): "))
+    if decision == 1:
+       print ("Te haces el dormido. La vendedor pasa de largo y sigues tranquilo.")
+    elif decision == 2:
+         dinero = dinero - 2000
+         print ("Compras algo, Porque te agrado la forma respetuosa como se dirigio, se te resta dinero.")
+    elif decision == 3:
+         salud = salud - 5
+         print ("Le dices que no con respeto, pero te queda la incomodidad, te baja la salud pero solo un poco.")
+    return salud, dinero
+salud, dinero = vendedora(salud,dinero)
+print ("salud actual es ", salud)
+print ("dinero actual es ", dinero)
+         
+    
+        
        
     
