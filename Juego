@@ -2,7 +2,7 @@ print("LLegar a Formarte")
 nombre=str(input("ingrese su nombre:"))
 
 salud=100
-dinero=25000
+dinero=30000
 
 def vagabundo(salud, dinero):
     print("Es un dia comun y corriente en Bogota")
@@ -29,6 +29,10 @@ salud, dinero = vagabundo(salud, dinero)
 print ("salud actual es ", salud)
 print ("dinero actual es ", dinero)
 
+
+
+
+
 def pasaje (salud, dinero):
     print("despues del incoveniente con el vagabundo llegas a la estacion de TransMi")
     print("al momento de pagar el pasaje, no puedes, ya que te quedaste sin saldo; y mas aun, vas tarde")
@@ -44,7 +48,7 @@ def pasaje (salud, dinero):
        print("Logras colarte al TransMi, pero casi te ve el guarda, te baja la salud por el susto.")
     elif decision == 2:
          dinero = dinero - 3550
-         print("Recargas la tarjeta y entras tranquilo al TransMi, se te resta dinero.")
+         print("Recargas la tarjeta. Entras tranquilo al TransMi, se te resta dinero.")
     elif decision == 3:
          salud = salud - 5
          print("Después de insistir un poco, alguien te ayuda con el pasaje. Pasas pena y te baja la salud.")
@@ -53,13 +57,17 @@ salud, dinero = pasaje(salud,dinero)
 print ("salud actual es ", salud)
 print ("dinero actual es ", dinero)
 
-def = Vendedora(salud, dinero):
+
+
+
+
+def vendedora(salud, dinero):
     print("Te subes al TransMilenio para dirigirte a Formarte")
-    print("En el trayecto, se sube un vendedora de apariencia extraña, y asegura que utiliza el dinero para ayudar a su familia)
+    print("En el trayecto, se sube un vendedora de apariencia extraña, y asegura que utiliza el dinero para ayudar a su familia")
     print("""
         ______________________________
  _____ /                              \\_____
-|     |   TRANSMILENIO  BOGOTA        |    |
+|     |   TRANSMILENIO  BOGOTA         |    |
 |     |--------------------------------|    |
 |     |  []   []   []   []   []   []   |    |
 |_____|________________________________|____|
@@ -78,8 +86,123 @@ def = Vendedora(salud, dinero):
 salud, dinero = vendedora(salud,dinero)
 print ("salud actual es ", salud)
 print ("dinero actual es ", dinero)
+
+
+
+
+
+def comida (salud, dinero):
+    print("llegas a Formarte, estudias...")
+    print("... y sigues estudiando, pasan las horas y ya es medio dia, tienes DEMASIADA hambre")
+    print("""
+        _________
+       /         \\
+      /  COMIDA   \\
+     /   CALLE    \\
+    /_____________\\
+        |  |  |
+     ___|__|__|___
+    |             |
+    |_____________|
+""")
+    decision=int(input("¿Qué haces? -- Puesto callejero barato(costo de 5000)(1) -- Corrientazo (costo de 13.000)(2) -- Aguantar hambre(3): "))
+    if decision == 1:
+       dinero = dinero - 5000
+       salud = salud - 20
+       print("Compras en el puesto barato… estaba rico, pero dudoso... Te cae pesado, te baja la salud.")
+    elif decision == 2:
+         dinero = dinero - 13000
+         print("Te comes un corrientazo completo. Quedas lleno y sigues.")
+    elif decision == 3:
+         salud = salud - 10
+         print ("Decides aguantar hambre, sigues, pero el cuerpo lo siente. Te baja la salud.")
+    return salud, dinero
+salud, dinero = comida(salud,dinero)
+print ("salud actual es ", salud)
+print ("dinero actual es ", dinero)
+
+
+
+
+
+def horapico (salud, dinero):
+    print("Despues de comer (o no comer) algo, te quedas estudiando hasta tarde en las instalaciones de Formarte")
+    print("Sales a las 5:00pm de Formarte, cuando llegas a la estacion, ves que esta full (Hora Pico)")
+    print("""
+        ____________________________
+ _____ /                            \\_____
+|     |  TRANSMILENIO - HORA PICO    |    |
+|     |------------------------------|    |
+|     |  [][][][][][][][][][][][]    |    |
+|     |  ||||||||||||||||||||||||    |    |
+|_____|______________________________|____|
+   O                                    O
+""")
+    decision=int(input("¿Que haces? -- Hacer cuerpo y subirte(1) -- Esperar hasta que se descongestione la estacion(2) -- Dejar pasar y irte caminando  (3): "))
+    if decision == 1:
+       salud = salud - 10
+       dinero = dinero - 3450
+       print("Te metes a la fuerza. Logras subir, pero quedas todo apretado.")
+    elif decision == 2:
+         salud = salud - 5
+         dinero = dinero - 3450
+         print("Esperas el siguiente, menos caótico, pero pierdes tiempo y paciencia.")
+    elif decision == 3:
+         salud = salud - 50
+         print("Decides esta vez ir caminando, pero esto es arriesgado y te gastas mucho, ya que pasaste todo el dia estudiando.")
+    return salud, dinero
+salud, dinero = horapico(salud,dinero)
+print ("salud actual es ", salud)
+print ("dinero actual es ", dinero)
          
-    
-        
-       
-    
+
+
+
+
+def lluvia (salud, dinero):
+    print("Sales del TransMilenio, y cuando sales...")
+    print("empieza a caer un aguacero, como buen dia en Bogota")
+    print("""
+        .-.
+     .-(   )-.
+    (___.__)__)
+      ' ' ' '
+     ' ' ' ' '
+    ' ' ' ' ' '
+    """)
+    decision=int(input("¿Que haces? -- Correr bajo la lluvia(1) -- Caminar normal mojándote(2) -- Buscar techo y esperar(3): "))
+    if decision == 1:
+       salud = salud - 10
+       print("Corres y te salvas un poco del agua, pero quedas un poco agitado.")
+    elif decision == 2:
+         salud = salud - 20
+         print("Te mojas por completo, probablemente de te Gripa")
+    elif decision == 3:
+         salud = salud - 2
+         print("Te refugias un momento. Pierdes tiempo pero no te mojas mucho.")
+    return salud, dinero
+salud, dinero = lluvia(salud,dinero)
+print ("salud actual es ", salud)
+print ("dinero actual es ", dinero)
+
+
+
+
+
+print ("FIN DEL DIA")
+print ("JUGADOR:", nombre)
+print ("SALUD FINAL:", salud)
+print ("DINERO FINAL:", dinero)
+
+def observacionesfinales():
+    if (salud <= 0):
+       print("No lograste sobrevivir el día en Bogotá...")
+    elif (salud > 70) and (dinero > 10000):
+         print("Llegaste bien a casa. Día normal dentro de todo.")
+    elif (salud > 40) and (dinero > 5000):
+         print("Sobreviviste el día, pero quedaste algo golpeado.")
+    elif (salud > 20):
+         print("Llegaste muy cansado y con lo justo. Día pesado.")
+    else:
+        print("Sobreviviste de milagro. Bogotá casi te come vivo.")
+print(observacionesfinales())
